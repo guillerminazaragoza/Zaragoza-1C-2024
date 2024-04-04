@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Proyecto1_Ejercicio6: Archivo de código fuente C:/Users/guill/Repositorios/Zaragoza-1C-2024/firmware/projects/proyecto1_ej4/main/proyecto1_ej4.c</title>
+<title>Proyecto1: Archivo de código fuente C:/Users/guill/Repositorios/Zaragoza-1C-2024/firmware/projects/proyecto1_ej4/main/proyecto1_ej4.c</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -33,9 +33,9 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Proyecto1_Ejercicio6<span id="projectnumber">&#160;1.0</span>
+   <div id="projectname">Proyecto1<span id="projectnumber">&#160;1.0</span>
    </div>
-   <div id="projectbrief">Ejemplo de Blinking</div>
+   <div id="projectbrief">doc ejercicio 6</div>
   </td>
     <td>        <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -155,38 +155,37 @@ $(function(){initNavTree('proyecto1__ej4_8c_source.html',''); initResizable(); }
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>{</div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    uint8_t arregloDigitos[3];</div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <a class="code hl_function" href="proyecto1__ej4_8c.html#a6b7f24f55b1a9baad08cbd84160adb1a">convertToBcdArray</a>(dato, cantDigitos, arregloDigitos);</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 3; i++)</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    {</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        <a class="code hl_function" href="proyecto1__ej4_8c.html#add5113f37b3549d1e7885dcbaf2788db">cambiarEstadosGPIO</a>(arregloDigitos[i], vectorPines);</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        <a class="code hl_function" href="group___g_i_o_p.html#gaba62250f2b0e73a98b6f35fb6078fdb1">GPIOOn</a>(vectorDigitos[i].pin);</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        <a class="code hl_function" href="group___g_i_o_p.html#ga30ed9d97406129b9b6390154a7479d70">GPIOOff</a>(vectorDigitos[i].pin);</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    }</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>}</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 3; i++){</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        <a class="code hl_function" href="proyecto1__ej4_8c.html#add5113f37b3549d1e7885dcbaf2788db">cambiarEstadosGPIO</a>(arregloDigitos[i], vectorPines);</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        <a class="code hl_function" href="group___g_i_o_p.html#gaba62250f2b0e73a98b6f35fb6078fdb1">GPIOOn</a>(vectorDigitos[i].pin);</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        <a class="code hl_function" href="group___g_i_o_p.html#ga30ed9d97406129b9b6390154a7479d70">GPIOOff</a>(vectorDigitos[i].pin);</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    }</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>}</div>
 </div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span><span class="comment">/*==================[external functions definition]==========================*/</span></div>
-<div class="foldopen" id="foldopen00108" data-start="{" data-end="}">
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno"><a class="line" href="proyecto1__ej4_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70">  108</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="proyecto1__ej4_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70">app_main</a>(<span class="keywordtype">void</span>)</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>{</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <span class="comment">// vector de estructuras del tipo &#39;gpioConf_t&#39; de tamaño 4</span></div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <a class="code hl_struct" href="structgpio_conf__t.html">gpioConf_t</a> pines[4] = {{<a class="code hl_enumvalue" href="group___g_i_o_p.html#ggaf65604147d0244c9b13cfdc865ad5393a081be372da926e3ca6f612b267854e95">GPIO_20</a>, <a class="code hl_enumvalue" href="group___g_i_o_p.html#gga423620ef7d69894833f70cfc395caaa9aa248e73c1faee9c6f072fd91569cf516">GPIO_OUTPUT</a>}, {<a class="code hl_enumvalue" href="group___g_i_o_p.html#ggaf65604147d0244c9b13cfdc865ad5393a32ff7e9a2f00d396ff2b2b62af571d7c">GPIO_21</a>, <a class="code hl_enumvalue" href="group___g_i_o_p.html#gga423620ef7d69894833f70cfc395caaa9aa248e73c1faee9c6f072fd91569cf516">GPIO_OUTPUT</a>}, {<a class="code hl_enumvalue" href="group___g_i_o_p.html#ggaf65604147d0244c9b13cfdc865ad5393aca7c5f2acf755d61b35d05ea921c79eb">GPIO_22</a>, <a class="code hl_enumvalue" href="group___g_i_o_p.html#gga423620ef7d69894833f70cfc395caaa9aa248e73c1faee9c6f072fd91569cf516">GPIO_OUTPUT</a>}, {<a class="code hl_enumvalue" href="group___g_i_o_p.html#ggaf65604147d0244c9b13cfdc865ad5393a4f3bac8a4733f9e96aa952fb1d9b0a7f">GPIO_23</a>, <a class="code hl_enumvalue" href="group___g_i_o_p.html#gga423620ef7d69894833f70cfc395caaa9aa248e73c1faee9c6f072fd91569cf516">GPIO_OUTPUT</a>}};</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 4; i++)</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    {</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        <a class="code hl_function" href="group___g_i_o_p.html#ga10240d283f64bd1b09fca664fda27964">GPIOInit</a>(pines[i].pin, pines[i].dir);</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    }</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    <a class="code hl_struct" href="structgpio_conf__t.html">gpioConf_t</a> digitos[3] = {{<a class="code hl_enumvalue" href="group___g_i_o_p.html#ggaf65604147d0244c9b13cfdc865ad5393a8bdaec9182fb8ab2106d5c67f3eabd2d">GPIO_9</a>, <a class="code hl_enumvalue" href="group___g_i_o_p.html#gga423620ef7d69894833f70cfc395caaa9aa248e73c1faee9c6f072fd91569cf516">GPIO_OUTPUT</a>}, {<a class="code hl_enumvalue" href="group___g_i_o_p.html#ggaf65604147d0244c9b13cfdc865ad5393a0e8bab7ea873c22eb90aa81116208917">GPIO_18</a>, <a class="code hl_enumvalue" href="group___g_i_o_p.html#gga423620ef7d69894833f70cfc395caaa9aa248e73c1faee9c6f072fd91569cf516">GPIO_OUTPUT</a>}, {<a class="code hl_enumvalue" href="group___g_i_o_p.html#ggaf65604147d0244c9b13cfdc865ad5393aa2918c94bcf473e7ff31138b6333f847">GPIO_19</a>, <a class="code hl_enumvalue" href="group___g_i_o_p.html#gga423620ef7d69894833f70cfc395caaa9aa248e73c1faee9c6f072fd91569cf516">GPIO_OUTPUT</a>}};</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 3; i++)</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    {</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        <a class="code hl_function" href="group___g_i_o_p.html#ga10240d283f64bd1b09fca664fda27964">GPIOInit</a>(digitos[i].pin, digitos[i].dir);</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    }</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    <a class="code hl_function" href="proyecto1__ej4_8c.html#a2c5ee65099fc89c96163c423d930f992">mostrarEnDisplay</a>(138, 3, pines, digitos);</div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>}</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span><span class="comment">/*==================[external functions definition]==========================*/</span></div>
+<div class="foldopen" id="foldopen00107" data-start="{" data-end="}">
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno"><a class="line" href="proyecto1__ej4_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70">  107</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="proyecto1__ej4_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70">app_main</a>(<span class="keywordtype">void</span>)</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>{</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    <span class="comment">// vector de estructuras del tipo &#39;gpioConf_t&#39; de tamaño 4</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <a class="code hl_struct" href="structgpio_conf__t.html">gpioConf_t</a> pines[4] = {{<a class="code hl_enumvalue" href="group___g_i_o_p.html#ggaf65604147d0244c9b13cfdc865ad5393a081be372da926e3ca6f612b267854e95">GPIO_20</a>, <a class="code hl_enumvalue" href="group___g_i_o_p.html#gga423620ef7d69894833f70cfc395caaa9aa248e73c1faee9c6f072fd91569cf516">GPIO_OUTPUT</a>}, {<a class="code hl_enumvalue" href="group___g_i_o_p.html#ggaf65604147d0244c9b13cfdc865ad5393a32ff7e9a2f00d396ff2b2b62af571d7c">GPIO_21</a>, <a class="code hl_enumvalue" href="group___g_i_o_p.html#gga423620ef7d69894833f70cfc395caaa9aa248e73c1faee9c6f072fd91569cf516">GPIO_OUTPUT</a>}, {<a class="code hl_enumvalue" href="group___g_i_o_p.html#ggaf65604147d0244c9b13cfdc865ad5393aca7c5f2acf755d61b35d05ea921c79eb">GPIO_22</a>, <a class="code hl_enumvalue" href="group___g_i_o_p.html#gga423620ef7d69894833f70cfc395caaa9aa248e73c1faee9c6f072fd91569cf516">GPIO_OUTPUT</a>}, {<a class="code hl_enumvalue" href="group___g_i_o_p.html#ggaf65604147d0244c9b13cfdc865ad5393a4f3bac8a4733f9e96aa952fb1d9b0a7f">GPIO_23</a>, <a class="code hl_enumvalue" href="group___g_i_o_p.html#gga423620ef7d69894833f70cfc395caaa9aa248e73c1faee9c6f072fd91569cf516">GPIO_OUTPUT</a>}};</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 4; i++)</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    {</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        <a class="code hl_function" href="group___g_i_o_p.html#ga10240d283f64bd1b09fca664fda27964">GPIOInit</a>(pines[i].pin, pines[i].dir);</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    }</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    <a class="code hl_struct" href="structgpio_conf__t.html">gpioConf_t</a> digitos[3] = {{<a class="code hl_enumvalue" href="group___g_i_o_p.html#ggaf65604147d0244c9b13cfdc865ad5393a8bdaec9182fb8ab2106d5c67f3eabd2d">GPIO_9</a>, <a class="code hl_enumvalue" href="group___g_i_o_p.html#gga423620ef7d69894833f70cfc395caaa9aa248e73c1faee9c6f072fd91569cf516">GPIO_OUTPUT</a>}, {<a class="code hl_enumvalue" href="group___g_i_o_p.html#ggaf65604147d0244c9b13cfdc865ad5393a0e8bab7ea873c22eb90aa81116208917">GPIO_18</a>, <a class="code hl_enumvalue" href="group___g_i_o_p.html#gga423620ef7d69894833f70cfc395caaa9aa248e73c1faee9c6f072fd91569cf516">GPIO_OUTPUT</a>}, {<a class="code hl_enumvalue" href="group___g_i_o_p.html#ggaf65604147d0244c9b13cfdc865ad5393aa2918c94bcf473e7ff31138b6333f847">GPIO_19</a>, <a class="code hl_enumvalue" href="group___g_i_o_p.html#gga423620ef7d69894833f70cfc395caaa9aa248e73c1faee9c6f072fd91569cf516">GPIO_OUTPUT</a>}};</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 3; i++)</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    {</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        <a class="code hl_function" href="group___g_i_o_p.html#ga10240d283f64bd1b09fca664fda27964">GPIOInit</a>(digitos[i].pin, digitos[i].dir);</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    }</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    <a class="code hl_function" href="proyecto1__ej4_8c.html#a2c5ee65099fc89c96163c423d930f992">mostrarEnDisplay</a>(138, 3, pines, digitos);</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>}</div>
 </div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span><span class="comment">/*==================[end of file]============================================*/</span></div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span><span class="comment">/*==================[end of file]============================================*/</span></div>
 <div class="ttc" id="agpio__mcu_8h_html"><div class="ttname"><a href="gpio__mcu_8h.html">gpio_mcu.h</a></div></div>
 <div class="ttc" id="agroup___g_i_o_p_html_ga10240d283f64bd1b09fca664fda27964"><div class="ttname"><a href="group___g_i_o_p.html#ga10240d283f64bd1b09fca664fda27964">GPIOInit</a></div><div class="ttdeci">void GPIOInit(gpio_t pin, io_t io)</div><div class="ttdoc">GPIO initialization.</div><div class="ttdef"><b>Definition</b> <a href="gpio__mcu_8c_source.html#l00067">gpio_mcu.c:67</a></div></div>
 <div class="ttc" id="agroup___g_i_o_p_html_ga30ed9d97406129b9b6390154a7479d70"><div class="ttname"><a href="group___g_i_o_p.html#ga30ed9d97406129b9b6390154a7479d70">GPIOOff</a></div><div class="ttdeci">void GPIOOff(gpio_t pin)</div><div class="ttdoc">Change GPIO state to low.</div><div class="ttdef"><b>Definition</b> <a href="gpio__mcu_8c_source.html#l00086">gpio_mcu.c:86</a></div></div>
@@ -202,7 +201,7 @@ $(function(){initNavTree('proyecto1__ej4_8c_source.html',''); initResizable(); }
 <div class="ttc" id="agroup___g_i_o_p_html_ggaf65604147d0244c9b13cfdc865ad5393aa2918c94bcf473e7ff31138b6333f847"><div class="ttname"><a href="group___g_i_o_p.html#ggaf65604147d0244c9b13cfdc865ad5393aa2918c94bcf473e7ff31138b6333f847">GPIO_19</a></div><div class="ttdeci">@ GPIO_19</div><div class="ttdef"><b>Definition</b> <a href="gpio__mcu_8h_source.html#l00071">gpio_mcu.h:71</a></div></div>
 <div class="ttc" id="agroup___g_i_o_p_html_ggaf65604147d0244c9b13cfdc865ad5393aca7c5f2acf755d61b35d05ea921c79eb"><div class="ttname"><a href="group___g_i_o_p.html#ggaf65604147d0244c9b13cfdc865ad5393aca7c5f2acf755d61b35d05ea921c79eb">GPIO_22</a></div><div class="ttdeci">@ GPIO_22</div><div class="ttdef"><b>Definition</b> <a href="gpio__mcu_8h_source.html#l00074">gpio_mcu.h:74</a></div></div>
 <div class="ttc" id="aproyecto1__ej4_8c_html_a2c5ee65099fc89c96163c423d930f992"><div class="ttname"><a href="proyecto1__ej4_8c.html#a2c5ee65099fc89c96163c423d930f992">mostrarEnDisplay</a></div><div class="ttdeci">void mostrarEnDisplay(uint32_t dato, uint8_t cantDigitos, gpioConf_t *vectorPines, gpioConf_t *vectorDigitos)</div><div class="ttdoc">muestra por display el valor recibido</div><div class="ttdef"><b>Definition</b> <a href="#l00095">proyecto1_ej4.c:95</a></div></div>
-<div class="ttc" id="aproyecto1__ej4_8c_html_a630544a7f0a2cc40d8a7fefab7e2fe70"><div class="ttname"><a href="proyecto1__ej4_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70">app_main</a></div><div class="ttdeci">void app_main(void)</div><div class="ttdef"><b>Definition</b> <a href="#l00108">proyecto1_ej4.c:108</a></div></div>
+<div class="ttc" id="aproyecto1__ej4_8c_html_a630544a7f0a2cc40d8a7fefab7e2fe70"><div class="ttname"><a href="proyecto1__ej4_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70">app_main</a></div><div class="ttdeci">void app_main(void)</div><div class="ttdef"><b>Definition</b> <a href="#l00107">proyecto1_ej4.c:107</a></div></div>
 <div class="ttc" id="aproyecto1__ej4_8c_html_a6b7f24f55b1a9baad08cbd84160adb1a"><div class="ttname"><a href="proyecto1__ej4_8c.html#a6b7f24f55b1a9baad08cbd84160adb1a">convertToBcdArray</a></div><div class="ttdeci">void convertToBcdArray(uint32_t data, uint8_t digits, uint8_t *bcd_number)</div><div class="ttdoc">convierte un numero decimal a BCD, guardando cada dígito de salida en un arreglo</div><div class="ttdef"><b>Definition</b> <a href="#l00053">proyecto1_ej4.c:53</a></div></div>
 <div class="ttc" id="aproyecto1__ej4_8c_html_add5113f37b3549d1e7885dcbaf2788db"><div class="ttname"><a href="proyecto1__ej4_8c.html#add5113f37b3549d1e7885dcbaf2788db">cambiarEstadosGPIO</a></div><div class="ttdeci">void cambiarEstadosGPIO(uint8_t valor, gpioConf_t *arregloGPIO)</div><div class="ttdoc">cambia el estado de cada GPIO a '0' o a '1' según el estado del bit correspondiente en el BCD ingresa...</div><div class="ttdef"><b>Definition</b> <a href="#l00069">proyecto1_ej4.c:69</a></div></div>
 <div class="ttc" id="astructgpio_conf__t_html"><div class="ttname"><a href="structgpio_conf__t.html">gpioConf_t</a></div><div class="ttdoc">estructura que representa la configuracion de un pin GPIO (numero y direccion)</div><div class="ttdef"><b>Definition</b> <a href="#l00037">proyecto1_ej4.c:38</a></div></div>

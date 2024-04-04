@@ -96,8 +96,7 @@ void mostrarEnDisplay(uint32_t dato, uint8_t cantDigitos, gpioConf_t *vectorPine
 {
 	uint8_t arregloDigitos[3];
 	convertToBcdArray(dato, cantDigitos, arregloDigitos);
-	for (int i = 0; i < 3; i++)
-	{
+	for (int i = 0; i < 3; i++){
 		cambiarEstadosGPIO(arregloDigitos[i], vectorPines);
 		GPIOOn(vectorDigitos[i].pin);
 		GPIOOff(vectorDigitos[i].pin);
