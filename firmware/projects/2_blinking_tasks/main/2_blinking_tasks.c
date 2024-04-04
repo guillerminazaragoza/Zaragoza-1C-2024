@@ -45,7 +45,7 @@ static void Led2Task(void *pvParameter){
     while(true){
         printf("LED_2 ON\n");
         LedOn(LED_2);
-        vTaskDelay(CONFIG_BLINK_PERIOD_LED_2 / portTICK_PERIOD_MS);
+        vTaskDelay(CONFIG_BLINK_PERIOD_LED_2 / portTICK_PERIOD_MS); //cambia el periodo y el led
         printf("LED_2 OFF\n");
         LedOff(LED_2);
         vTaskDelay(CONFIG_BLINK_PERIOD_LED_2 / portTICK_PERIOD_MS);

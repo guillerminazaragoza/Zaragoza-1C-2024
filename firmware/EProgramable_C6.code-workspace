@@ -15,6 +15,12 @@
         {
             "path": "./projects/x_template"
         },
+        {
+            "path": "projects/proyecto1_ej3"
+        },
+        {
+            "path": "projects/proyecto1_ej4"
+        }
     ],
     "settings": {
         "idf.portWin": "COM14",
@@ -70,7 +76,8 @@
             "mpu6050.h": "c",
             "i2c_mcu.h": "c",
             "atomic": "c",
-            "*.inc": "c"
+            "*.inc": "c",
+            "cstdint": "c"
         },
     },
     "tasks": {
