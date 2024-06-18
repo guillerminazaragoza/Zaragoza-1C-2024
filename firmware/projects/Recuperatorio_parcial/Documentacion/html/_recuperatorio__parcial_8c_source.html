@@ -1,0 +1,276 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Recuperatorio_parcial: Archivo de código fuente firmware/projects/Recuperatorio_parcial/main/Recuperatorio_parcial.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Recuperatorio_parcial<span id="projectnumber">&#160;1.0</span>
+   </div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('_recuperatorio__parcial_8c_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Recuperatorio_parcial.c</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_recuperatorio__parcial_8c.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment">/*==================[inclusions]=============================================*/</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;stdbool.h&gt;</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &quot;freertos/FreeRTOS.h&quot;</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &quot;freertos/task.h&quot;</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &lt;gpio_mcu.h&gt;</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#include &quot;analog_io_mcu.h&quot;</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#include &quot;uart_mcu.h&quot;</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#include &quot;hc_sr04.h&quot;</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#include &quot;led.h&quot;</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment">/*==================[macros and definitions]=================================*/</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="_recuperatorio__parcial_8c.html#a50a6ea38ef90bd8d54f20982fafa8bc2">   38</a></span><span class="preprocessor">#define TIEMPO_MEDICION_PRESENCIA 1000  </span><span class="comment">// 1000 ms = 1 s</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="_recuperatorio__parcial_8c.html#a96e95a89ede6917e5dd740179080433c">   39</a></span><span class="preprocessor">#define TIEMPO_MEDICION_TEMPERATURA 100 </span><span class="comment">// 100 ms entre cada medicion</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="_recuperatorio__parcial_8c.html#ac2002f260a834f4650b9e356279e68b7">   40</a></span><span class="preprocessor">#define TEMPERATURA_MAXIMA 50           </span><span class="comment">// Tmax que lee el sensor</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="_recuperatorio__parcial_8c.html#a2c9e85d22a9ba37ea589b1747af46307">   41</a></span><span class="preprocessor">#define VREF 3300                       </span><span class="comment">// 3300 mV = 3.3 V</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="_recuperatorio__parcial_8c.html#aae7db9f50ee8ec9d49b0239808690a7f">   42</a></span><span class="preprocessor">#define DISTANCIA_MINIMA 8              </span><span class="comment">// Distanciam mínima del rango de medición</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="_recuperatorio__parcial_8c.html#a3bd4e03e947e65932b368c8f11bf1ac2">   43</a></span><span class="preprocessor">#define DISTANCIA_MAXIMA 12             </span><span class="comment">// Distancia máxima del rango de medición</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="_recuperatorio__parcial_8c.html#ad5c9c1f8a711ffec17721f8b670adbc6">   44</a></span><span class="preprocessor">#define DISTANCIA_NUEVA_MEDICION 140    </span><span class="comment">// Distancia límite. Se toman nuevas medidas</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="preprocessor">#define TEMPERATURA_MAXIMA 37.5         </span><span class="comment">// Temperatura para la cual se prende la alarma</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="comment">/*==================[internal data definition]===============================*/</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="_recuperatorio__parcial_8c.html#a0a959357aa23f6faa63b3c88eff65e01">   47</a></span><span class="keywordtype">float</span> <a class="code hl_variable" href="_recuperatorio__parcial_8c.html#a0a959357aa23f6faa63b3c88eff65e01">distancia</a> = 0;            <span class="comment">// Almacena la distancia medida por el sensor ultrasónico</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="_recuperatorio__parcial_8c.html#a8347aeb522c9e13e9f376640fad780e7">   48</a></span><span class="keywordtype">float</span> <a class="code hl_variable" href="_recuperatorio__parcial_8c.html#a8347aeb522c9e13e9f376640fad780e7">temperatura</a> = 0;          <span class="comment">// Almacena la temperatura medida por la termopila</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="_recuperatorio__parcial_8c.html#a2a27c3bcaf8527c454db73b1e96debe0">   49</a></span><span class="keywordtype">float</span> <a class="code hl_variable" href="_recuperatorio__parcial_8c.html#a2a27c3bcaf8527c454db73b1e96debe0">promedio_temperatura</a> = 0; <span class="comment">// Almacena el promedio de 10 muestras de temperatura</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="_recuperatorio__parcial_8c.html#a923c93d247c3b501b51050b00a6cee43">   50</a></span><span class="keywordtype">float</span> <a class="code hl_variable" href="_recuperatorio__parcial_8c.html#a923c93d247c3b501b51050b00a6cee43">Vin</a> = 0;                  <span class="comment">// Tensión de entrada de la señal analógica</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="comment">/*==================[internal functions declaration]=========================*/</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="keyword">static</span> <span class="keywordtype">void</span> MedirDistanciaTask(<span class="keywordtype">void</span> *pvParameter)</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>{</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keywordflow">while</span> (<span class="keyword">true</span>)</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    {</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <span class="comment">/* Medir la distancia en cm */</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <a class="code hl_variable" href="_recuperatorio__parcial_8c.html#a0a959357aa23f6faa63b3c88eff65e01">distancia</a> = HcSr04ReadDistanceInCentimeters();</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <span class="comment">/* Si está cerca */</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="_recuperatorio__parcial_8c.html#a0a959357aa23f6faa63b3c88eff65e01">distancia</a> &lt; <a class="code hl_define" href="_recuperatorio__parcial_8c.html#aae7db9f50ee8ec9d49b0239808690a7f">DISTANCIA_MINIMA</a>)</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        {</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>            LedOn(LED_1); <span class="comment">/* Prende LED1, apaga LED2 y LED3 */</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>            LedOff(LED_2);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            LedOff(LED_3);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        }</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        <span class="comment">/* Si está lejos */</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="_recuperatorio__parcial_8c.html#a0a959357aa23f6faa63b3c88eff65e01">distancia</a> &gt; <a class="code hl_define" href="_recuperatorio__parcial_8c.html#a3bd4e03e947e65932b368c8f11bf1ac2">DISTANCIA_MAXIMA</a>)</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        {</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>            LedOff(LED_1);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            LedOff(LED_2);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            LedOn(LED_3); <span class="comment">/* Prende LED3, apaga LED1 y LED2 */</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        }</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        <span class="comment">/* Si está dentro del rango */</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        {</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            LedOff(LED_1);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>            LedOn(LED_2); <span class="comment">/* Prende LED2, apaga LED1 y LED3 */</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>            LedOff(LED_3);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        }</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        LedsOffAll(); <span class="comment">// Apago todos los LEDs después de la medición de distancia</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        vTaskDelay(pdMS_TO_TICKS(<a class="code hl_define" href="_recuperatorio__parcial_8c.html#a50a6ea38ef90bd8d54f20982fafa8bc2">TIEMPO_MEDICION_PRESENCIA</a>)); <span class="comment">// Cada &#39;TIEMPO_MEDICION_PRESENCIA&#39; milisegundos</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    }</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>}</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="foldopen" id="foldopen00093" data-start="{" data-end="}">
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="_recuperatorio__parcial_8c.html#a1beba1b306938f823fbe28e2e1d8709b">   93</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="_recuperatorio__parcial_8c.html#a1beba1b306938f823fbe28e2e1d8709b">EscribirEnMonitor</a>()</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>{</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    UartSendString(UART_PC, (<span class="keywordtype">char</span> *)UartItoa(<a class="code hl_variable" href="_recuperatorio__parcial_8c.html#a2a27c3bcaf8527c454db73b1e96debe0">promedio_temperatura</a>, 10)); <span class="comment">// Envía el valor promediado de la temperatura por UART al monitor de PC</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    UartSendString(UART_PC, <span class="stringliteral">&quot;°C persona a &quot;</span>);                            <span class="comment">// Convierte promedio_temperatura a una cadena de caracteres</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    UartSendString(UART_PC, (<span class="keywordtype">char</span> *)UartItoa(<a class="code hl_variable" href="_recuperatorio__parcial_8c.html#a0a959357aa23f6faa63b3c88eff65e01">distancia</a>, 10));            <span class="comment">// Escribe la distancia</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    UartSendString(UART_PC, <span class="stringliteral">&quot; cm\r\n&quot;</span>);                                  <span class="comment">// Escribe cm y caracteres de salto de línea</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>}</div>
+</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span><span class="keyword">static</span> <span class="keywordtype">void</span> MedirTemperaturaTask(<span class="keywordtype">void</span> *pvParameter)</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>{</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    <span class="keywordflow">while</span> (<span class="keyword">true</span>)</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    {</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        <span class="comment">/* Si está dentro del rango */</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        <span class="keywordflow">if</span> ((<a class="code hl_variable" href="_recuperatorio__parcial_8c.html#a0a959357aa23f6faa63b3c88eff65e01">distancia</a> &gt; <a class="code hl_define" href="_recuperatorio__parcial_8c.html#aae7db9f50ee8ec9d49b0239808690a7f">DISTANCIA_MINIMA</a>) &amp; (<a class="code hl_variable" href="_recuperatorio__parcial_8c.html#a0a959357aa23f6faa63b3c88eff65e01">distancia</a> &lt; <a class="code hl_define" href="_recuperatorio__parcial_8c.html#a3bd4e03e947e65932b368c8f11bf1ac2">DISTANCIA_MAXIMA</a>))</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        {</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>            <span class="comment">/* Lee el valor de la entrada analógica CH1 (en mV) y lo almacena en Vin */</span></div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>            AnalogInputReadSingle(CH1, &amp;<a class="code hl_variable" href="_recuperatorio__parcial_8c.html#a923c93d247c3b501b51050b00a6cee43">Vin</a>);</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 10; i++)</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>            {</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>                <span class="comment">/*Sumar las 10 temperaturas*/</span></div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>                <a class="code hl_variable" href="_recuperatorio__parcial_8c.html#a8347aeb522c9e13e9f376640fad780e7">temperatura</a> += <a class="code hl_variable" href="_recuperatorio__parcial_8c.html#a923c93d247c3b501b51050b00a6cee43">Vin</a> * <a class="code hl_define" href="_recuperatorio__parcial_8c.html#ac2002f260a834f4650b9e356279e68b7">TEMPERATURA_MAXIMA</a> / <a class="code hl_define" href="_recuperatorio__parcial_8c.html#a2c9e85d22a9ba37ea589b1747af46307">VREF</a>;</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>                <span class="comment">// 3.3V representan 50°C</span></div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>                <span class="comment">// Vin representa a temp °C --&gt; temp =  Vin * 50°C / 3.3V</span></div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>            }</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>            <a class="code hl_variable" href="_recuperatorio__parcial_8c.html#a2a27c3bcaf8527c454db73b1e96debe0">promedio_temperatura</a> = <a class="code hl_variable" href="_recuperatorio__parcial_8c.html#a8347aeb522c9e13e9f376640fad780e7">temperatura</a> / 10; <span class="comment">// Calculo promedio</span></div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>            <a class="code hl_function" href="_recuperatorio__parcial_8c.html#a1beba1b306938f823fbe28e2e1d8709b">EscribirEnMonitor</a>();                     <span class="comment">// Llamo a la función para que escriba en monitor</span></div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        }</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        <span class="comment">/* Si la persona se mueve más de 140 cm */</span></div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="_recuperatorio__parcial_8c.html#a0a959357aa23f6faa63b3c88eff65e01">distancia</a> &gt; <a class="code hl_define" href="_recuperatorio__parcial_8c.html#ad5c9c1f8a711ffec17721f8b670adbc6">DISTANCIA_NUEVA_MEDICION</a>) </div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        {</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>            <a class="code hl_variable" href="_recuperatorio__parcial_8c.html#a8347aeb522c9e13e9f376640fad780e7">temperatura</a> = 0;                        <span class="comment">// Vuelvo a inicializar en 0 para otro ciclo de lectura</span></div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>            <a class="code hl_variable" href="_recuperatorio__parcial_8c.html#a2a27c3bcaf8527c454db73b1e96debe0">promedio_temperatura</a> = 0;</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        }</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        vTaskDelay(pdMS_TO_TICKS(<a class="code hl_define" href="_recuperatorio__parcial_8c.html#a96e95a89ede6917e5dd740179080433c">TIEMPO_MEDICION_TEMPERATURA</a>)); <span class="comment">// Cada &#39;TIEMPO_MEDICION_TEMPERATURA&#39; milisegundos</span></div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    }</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>}</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
+<div class="foldopen" id="foldopen00139" data-start="{" data-end="}">
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno"><a class="line" href="_recuperatorio__parcial_8c.html#a1cfba0fd0943d71475ec512cf1c9651a">  139</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="_recuperatorio__parcial_8c.html#a1cfba0fd0943d71475ec512cf1c9651a">EncenderAlarma</a>()</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>{</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    <span class="comment">/* Si la temperatura promedio está por debajo de 37.5°C */</span></div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="_recuperatorio__parcial_8c.html#a2a27c3bcaf8527c454db73b1e96debe0">promedio_temperatura</a> &lt; <a class="code hl_define" href="_recuperatorio__parcial_8c.html#ac2002f260a834f4650b9e356279e68b7">TEMPERATURA_MAXIMA</a>)</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    {</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>        GPIOOff(GPIO_9); <span class="comment">/* La alarma no se prende --&gt; GPIO_9 en 0*/</span></div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    }</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    <span class="comment">/* Si la temperatura está por encima de 37.5°C */</span></div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>        GPIOOn(GPIO_9); <span class="comment">/* La alarma se prende --&gt; GPIO_9 en 1 */</span></div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>}</div>
+</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span><span class="comment">/*==================[external functions definition]==========================*/</span></div>
+<div class="foldopen" id="foldopen00151" data-start="{" data-end="}">
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno"><a class="line" href="_recuperatorio__parcial_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70">  151</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="_recuperatorio__parcial_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70">app_main</a>(<span class="keywordtype">void</span>)</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>{</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    <span class="comment">/* Inicialización */</span></div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    LedsInit();                    <span class="comment">// Inicialización de LEDs</span></div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    HcSr04Init(GPIO_3, GPIO_2);    <span class="comment">// Inicialización del sensor de ultrasonido con los pines especificados</span></div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    GPIOInit(CH1, GPIO_INPUT);     <span class="comment">// Inicialización del GPIO que se usa para la termopila</span></div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>    GPIOInit(GPIO_9, GPIO_OUTPUT); <span class="comment">// Inicialización del GPIO que se usa para la alarma</span></div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span> </div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    <span class="comment">/*Inicializacion de terminal PC*/</span></div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    serial_config_t terminal_PC = {</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>        .port = UART_PC,</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>        .baud_rate = 115200,</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>        .func_p = NULL,</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>        .param_p = NULL};</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    UartInit(&amp;terminal_PC);</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span> </div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    <span class="comment">/*Inicializacion entrada analogica*/</span></div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    analog_input_config_t conv_AD = {</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>        .input = CH1,</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>        .mode = ADC_SINGLE,</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>        .func_p = NULL,</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>        .param_p = NULL,</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>        .sample_frec = 0};</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>    AnalogInputInit(&amp;conv_AD);</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span> </div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>    <span class="comment">// Creación de tareas</span></div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>    xTaskCreate(&amp;MedirDistanciaTask, <span class="stringliteral">&quot;Medir la distancia&quot;</span>, 1024, NULL, 5, NULL);</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    xTaskCreate(&amp;MedirTemperaturaTask, <span class="stringliteral">&quot;Medir la temperatura&quot;</span>, 1024, NULL, 5, NULL);</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>}</div>
+</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span><span class="comment">/*==================[end of file]============================================*/</span></div>
+<div class="ttc" id="a_recuperatorio__parcial_8c_html_a0a959357aa23f6faa63b3c88eff65e01"><div class="ttname"><a href="_recuperatorio__parcial_8c.html#a0a959357aa23f6faa63b3c88eff65e01">distancia</a></div><div class="ttdeci">float distancia</div><div class="ttdef"><b>Definition</b> <a href="#l00047">Recuperatorio_parcial.c:47</a></div></div>
+<div class="ttc" id="a_recuperatorio__parcial_8c_html_a1beba1b306938f823fbe28e2e1d8709b"><div class="ttname"><a href="_recuperatorio__parcial_8c.html#a1beba1b306938f823fbe28e2e1d8709b">EscribirEnMonitor</a></div><div class="ttdeci">void EscribirEnMonitor()</div><div class="ttdoc">Función que escribe los datos de temperatura promedio y distancia y los envía al monitor de la PC por...</div><div class="ttdef"><b>Definition</b> <a href="#l00093">Recuperatorio_parcial.c:93</a></div></div>
+<div class="ttc" id="a_recuperatorio__parcial_8c_html_a1cfba0fd0943d71475ec512cf1c9651a"><div class="ttname"><a href="_recuperatorio__parcial_8c.html#a1cfba0fd0943d71475ec512cf1c9651a">EncenderAlarma</a></div><div class="ttdeci">void EncenderAlarma()</div><div class="ttdoc">función que prende una alarma si la temperatura se excede de un límite. Controlada mediante un GPIO</div><div class="ttdef"><b>Definition</b> <a href="#l00139">Recuperatorio_parcial.c:139</a></div></div>
+<div class="ttc" id="a_recuperatorio__parcial_8c_html_a2a27c3bcaf8527c454db73b1e96debe0"><div class="ttname"><a href="_recuperatorio__parcial_8c.html#a2a27c3bcaf8527c454db73b1e96debe0">promedio_temperatura</a></div><div class="ttdeci">float promedio_temperatura</div><div class="ttdef"><b>Definition</b> <a href="#l00049">Recuperatorio_parcial.c:49</a></div></div>
+<div class="ttc" id="a_recuperatorio__parcial_8c_html_a2c9e85d22a9ba37ea589b1747af46307"><div class="ttname"><a href="_recuperatorio__parcial_8c.html#a2c9e85d22a9ba37ea589b1747af46307">VREF</a></div><div class="ttdeci">#define VREF</div><div class="ttdef"><b>Definition</b> <a href="#l00041">Recuperatorio_parcial.c:41</a></div></div>
+<div class="ttc" id="a_recuperatorio__parcial_8c_html_a3bd4e03e947e65932b368c8f11bf1ac2"><div class="ttname"><a href="_recuperatorio__parcial_8c.html#a3bd4e03e947e65932b368c8f11bf1ac2">DISTANCIA_MAXIMA</a></div><div class="ttdeci">#define DISTANCIA_MAXIMA</div><div class="ttdef"><b>Definition</b> <a href="#l00043">Recuperatorio_parcial.c:43</a></div></div>
+<div class="ttc" id="a_recuperatorio__parcial_8c_html_a50a6ea38ef90bd8d54f20982fafa8bc2"><div class="ttname"><a href="_recuperatorio__parcial_8c.html#a50a6ea38ef90bd8d54f20982fafa8bc2">TIEMPO_MEDICION_PRESENCIA</a></div><div class="ttdeci">#define TIEMPO_MEDICION_PRESENCIA</div><div class="ttdef"><b>Definition</b> <a href="#l00038">Recuperatorio_parcial.c:38</a></div></div>
+<div class="ttc" id="a_recuperatorio__parcial_8c_html_a630544a7f0a2cc40d8a7fefab7e2fe70"><div class="ttname"><a href="_recuperatorio__parcial_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70">app_main</a></div><div class="ttdeci">void app_main(void)</div><div class="ttdef"><b>Definition</b> <a href="#l00151">Recuperatorio_parcial.c:151</a></div></div>
+<div class="ttc" id="a_recuperatorio__parcial_8c_html_a8347aeb522c9e13e9f376640fad780e7"><div class="ttname"><a href="_recuperatorio__parcial_8c.html#a8347aeb522c9e13e9f376640fad780e7">temperatura</a></div><div class="ttdeci">float temperatura</div><div class="ttdef"><b>Definition</b> <a href="#l00048">Recuperatorio_parcial.c:48</a></div></div>
+<div class="ttc" id="a_recuperatorio__parcial_8c_html_a923c93d247c3b501b51050b00a6cee43"><div class="ttname"><a href="_recuperatorio__parcial_8c.html#a923c93d247c3b501b51050b00a6cee43">Vin</a></div><div class="ttdeci">float Vin</div><div class="ttdef"><b>Definition</b> <a href="#l00050">Recuperatorio_parcial.c:50</a></div></div>
+<div class="ttc" id="a_recuperatorio__parcial_8c_html_a96e95a89ede6917e5dd740179080433c"><div class="ttname"><a href="_recuperatorio__parcial_8c.html#a96e95a89ede6917e5dd740179080433c">TIEMPO_MEDICION_TEMPERATURA</a></div><div class="ttdeci">#define TIEMPO_MEDICION_TEMPERATURA</div><div class="ttdef"><b>Definition</b> <a href="#l00039">Recuperatorio_parcial.c:39</a></div></div>
+<div class="ttc" id="a_recuperatorio__parcial_8c_html_aae7db9f50ee8ec9d49b0239808690a7f"><div class="ttname"><a href="_recuperatorio__parcial_8c.html#aae7db9f50ee8ec9d49b0239808690a7f">DISTANCIA_MINIMA</a></div><div class="ttdeci">#define DISTANCIA_MINIMA</div><div class="ttdef"><b>Definition</b> <a href="#l00042">Recuperatorio_parcial.c:42</a></div></div>
+<div class="ttc" id="a_recuperatorio__parcial_8c_html_ac2002f260a834f4650b9e356279e68b7"><div class="ttname"><a href="_recuperatorio__parcial_8c.html#ac2002f260a834f4650b9e356279e68b7">TEMPERATURA_MAXIMA</a></div><div class="ttdeci">#define TEMPERATURA_MAXIMA</div><div class="ttdef"><b>Definition</b> <a href="#l00040">Recuperatorio_parcial.c:40</a></div></div>
+<div class="ttc" id="a_recuperatorio__parcial_8c_html_ad5c9c1f8a711ffec17721f8b670adbc6"><div class="ttname"><a href="_recuperatorio__parcial_8c.html#ad5c9c1f8a711ffec17721f8b670adbc6">DISTANCIA_NUEVA_MEDICION</a></div><div class="ttdeci">#define DISTANCIA_NUEVA_MEDICION</div><div class="ttdef"><b>Definition</b> <a href="#l00044">Recuperatorio_parcial.c:44</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d9edf6c004b4a7ff14fe9ae7a92214ee.html">firmware</a></li><li class="navelem"><a class="el" href="dir_429d80758da54da73083af4edd40d0b3.html">projects</a></li><li class="navelem"><a class="el" href="dir_127787cdfa313ce84a31861e57bd90e8.html">Recuperatorio_parcial</a></li><li class="navelem"><a class="el" href="dir_6f241c2bad73204c51ccbb9428d188ff.html">main</a></li><li class="navelem"><a class="el" href="_recuperatorio__parcial_8c.html">Recuperatorio_parcial.c</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
+  </ul>
+</div>
+</body>
+</html>
