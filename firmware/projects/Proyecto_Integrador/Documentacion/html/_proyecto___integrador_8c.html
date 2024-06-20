@@ -1,0 +1,520 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto_Integrador: Referencia del archivo firmware/projects/Proyecto_Integrador/main/Proyecto_Integrador.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Proyecto_Integrador<span id="projectnumber">&#160;1.0</span>
+   </div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('_proyecto___integrador_8c.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#define-members">defines</a> &#124;
+<a href="#func-members">Funciones</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle"><div class="title">Referencia del archivo Proyecto_Integrador.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdint.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &quot;freertos/FreeRTOS.h&quot;</code><br />
+<code>#include &quot;freertos/task.h&quot;</code><br />
+<code>#include &quot;timer_mcu.h&quot;</code><br />
+<code>#include &quot;led.h&quot;</code><br />
+<code>#include &quot;neopixel_stripe.h&quot;</code><br />
+<code>#include &quot;ble_mcu.h&quot;</code><br />
+<code>#include &quot;ws2812b.h&quot;</code><br />
+<code>#include &quot;Si7007.h&quot;</code><br />
+</div>
+<p><a href="_proyecto___integrador_8c_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+defines</h2></td></tr>
+<tr class="memitem:a7c047a95df338c7c37dc2e60e703912f" id="r_a7c047a95df338c7c37dc2e60e703912f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7c047a95df338c7c37dc2e60e703912f">TIMER_HyT</a>&#160;&#160;&#160;5000000</td></tr>
+<tr class="separator:a7c047a95df338c7c37dc2e60e703912f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a932a2f4ee5bbdf0ea7bef2a0ee79b11f" id="r_a932a2f4ee5bbdf0ea7bef2a0ee79b11f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a932a2f4ee5bbdf0ea7bef2a0ee79b11f">UT_BAJO</a>&#160;&#160;&#160;10.0</td></tr>
+<tr class="separator:a932a2f4ee5bbdf0ea7bef2a0ee79b11f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a763deb58961d78f23eeecf08b7a9a793" id="r_a763deb58961d78f23eeecf08b7a9a793"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a763deb58961d78f23eeecf08b7a9a793">UT_ALTO</a>&#160;&#160;&#160;28.0</td></tr>
+<tr class="separator:a763deb58961d78f23eeecf08b7a9a793"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87f27b6dc1faada629743fe8da668f77" id="r_a87f27b6dc1faada629743fe8da668f77"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a87f27b6dc1faada629743fe8da668f77">UH_BAJO</a>&#160;&#160;&#160;30.0</td></tr>
+<tr class="separator:a87f27b6dc1faada629743fe8da668f77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f845f54059f56b6de229e304f834fdd" id="r_a4f845f54059f56b6de229e304f834fdd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4f845f54059f56b6de229e304f834fdd">UH_ALTO</a>&#160;&#160;&#160;80.0</td></tr>
+<tr class="separator:a4f845f54059f56b6de229e304f834fdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c4ae9a4146ce8d6a5debc90300d9abd" id="r_a4c4ae9a4146ce8d6a5debc90300d9abd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4c4ae9a4146ce8d6a5debc90300d9abd">NUM_LEDS</a>&#160;&#160;&#160;20</td></tr>
+<tr class="separator:a4c4ae9a4146ce8d6a5debc90300d9abd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:aa253af3b500a9209d90c44fefb03137c" id="r_aa253af3b500a9209d90c44fefb03137c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa253af3b500a9209d90c44fefb03137c">leerDatos</a> (uint8_t *data, uint8_t length)</td></tr>
+<tr class="memdesc:aa253af3b500a9209d90c44fefb03137c"><td class="mdescLeft">&#160;</td><td class="mdescRight">función a ejecutarse ante una interrupción de recepción a través de la conexión BLE. Lee los datos de la aplicación: encendido/apagado y tiempo objetivo del usuario.  <br /></td></tr>
+<tr class="separator:aa253af3b500a9209d90c44fefb03137c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aedc4124a5ff0100abd0f9f2048fd5bc5" id="r_aedc4124a5ff0100abd0f9f2048fd5bc5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aedc4124a5ff0100abd0f9f2048fd5bc5">funcTimer_HyT</a> ()</td></tr>
+<tr class="memdesc:aedc4124a5ff0100abd0f9f2048fd5bc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Función invocada en la interrupción del timer A.  <br /></td></tr>
+<tr class="separator:aedc4124a5ff0100abd0f9f2048fd5bc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a630544a7f0a2cc40d8a7fefab7e2fe70" id="r_a630544a7f0a2cc40d8a7fefab7e2fe70"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a630544a7f0a2cc40d8a7fefab7e2fe70">app_main</a> (void)</td></tr>
+<tr class="separator:a630544a7f0a2cc40d8a7fefab7e2fe70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a5332d02d82dacdfb5c6dc01cb428b013" id="r_a5332d02d82dacdfb5c6dc01cb428b013"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5332d02d82dacdfb5c6dc01cb428b013">encendido</a> = false</td></tr>
+<tr class="separator:a5332d02d82dacdfb5c6dc01cb428b013"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac830e3211ae94323e1e087057e08b359" id="r_ac830e3211ae94323e1e087057e08b359"><td class="memItemLeft" align="right" valign="top">TaskHandle_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac830e3211ae94323e1e087057e08b359">MedirHyT_handle</a> = NULL</td></tr>
+<tr class="separator:ac830e3211ae94323e1e087057e08b359"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2237b4c339a792bdf422b138a11225ee" id="r_a2237b4c339a792bdf422b138a11225ee"><td class="memItemLeft" align="right" valign="top">TaskHandle_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2237b4c339a792bdf422b138a11225ee">ControlHyT_handle</a> = NULL</td></tr>
+<tr class="separator:a2237b4c339a792bdf422b138a11225ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8347aeb522c9e13e9f376640fad780e7" id="r_a8347aeb522c9e13e9f376640fad780e7"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8347aeb522c9e13e9f376640fad780e7">temperatura</a> = 0</td></tr>
+<tr class="separator:a8347aeb522c9e13e9f376640fad780e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34280c09711b9f4f72211e5c467b57bf" id="r_a34280c09711b9f4f72211e5c467b57bf"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a34280c09711b9f4f72211e5c467b57bf">humedad</a> = 0</td></tr>
+<tr class="separator:a34280c09711b9f4f72211e5c467b57bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a22ffe05e4e858565ff642249a3e577" id="r_a4a22ffe05e4e858565ff642249a3e577"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4a22ffe05e4e858565ff642249a3e577">tiempoIdeal</a> = 20</td></tr>
+<tr class="separator:a4a22ffe05e4e858565ff642249a3e577"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae442c911a58648921de5456a0879544e" id="r_ae442c911a58648921de5456a0879544e"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae442c911a58648921de5456a0879544e">tiempoIdealMS</a> = 0</td></tr>
+<tr class="separator:ae442c911a58648921de5456a0879544e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a274e5fa09f373f2955815c283e707e18" id="r_a274e5fa09f373f2955815c283e707e18"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a274e5fa09f373f2955815c283e707e18">tiempoLED</a> = 0</td></tr>
+<tr class="separator:a274e5fa09f373f2955815c283e707e18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a959357aa23f6faa63b3c88eff65e01" id="r_a0a959357aa23f6faa63b3c88eff65e01"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0a959357aa23f6faa63b3c88eff65e01">distancia</a> = <a class="el" href="#a4c4ae9a4146ce8d6a5debc90300d9abd">NUM_LEDS</a> / 30.0</td></tr>
+<tr class="separator:a0a959357aa23f6faa63b3c88eff65e01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentación de «define»</h2>
+<a id="a4c4ae9a4146ce8d6a5debc90300d9abd" name="a4c4ae9a4146ce8d6a5debc90300d9abd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c4ae9a4146ce8d6a5debc90300d9abd">&#9670;&#160;</a></span>NUM_LEDS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NUM_LEDS&#160;&#160;&#160;20</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto___integrador_8c_source.html#l00055">55</a> del archivo <a class="el" href="_proyecto___integrador_8c_source.html">Proyecto_Integrador.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_proyecto___integrador_8c_source.html#l00234">app_main()</a> y <a class="el" href="_proyecto___integrador_8c_source.html#l00076">leerDatos()</a>.</p>
+
+</div>
+</div>
+<a id="a7c047a95df338c7c37dc2e60e703912f" name="a7c047a95df338c7c37dc2e60e703912f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c047a95df338c7c37dc2e60e703912f">&#9670;&#160;</a></span>TIMER_HyT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TIMER_HyT&#160;&#160;&#160;5000000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto___integrador_8c_source.html#l00047">47</a> del archivo <a class="el" href="_proyecto___integrador_8c_source.html">Proyecto_Integrador.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_proyecto___integrador_8c_source.html#l00234">app_main()</a>.</p>
+
+</div>
+</div>
+<a id="a4f845f54059f56b6de229e304f834fdd" name="a4f845f54059f56b6de229e304f834fdd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f845f54059f56b6de229e304f834fdd">&#9670;&#160;</a></span>UH_ALTO</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UH_ALTO&#160;&#160;&#160;80.0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto___integrador_8c_source.html#l00053">53</a> del archivo <a class="el" href="_proyecto___integrador_8c_source.html">Proyecto_Integrador.c</a>.</p>
+
+</div>
+</div>
+<a id="a87f27b6dc1faada629743fe8da668f77" name="a87f27b6dc1faada629743fe8da668f77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87f27b6dc1faada629743fe8da668f77">&#9670;&#160;</a></span>UH_BAJO</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UH_BAJO&#160;&#160;&#160;30.0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto___integrador_8c_source.html#l00052">52</a> del archivo <a class="el" href="_proyecto___integrador_8c_source.html">Proyecto_Integrador.c</a>.</p>
+
+</div>
+</div>
+<a id="a763deb58961d78f23eeecf08b7a9a793" name="a763deb58961d78f23eeecf08b7a9a793"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a763deb58961d78f23eeecf08b7a9a793">&#9670;&#160;</a></span>UT_ALTO</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UT_ALTO&#160;&#160;&#160;28.0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto___integrador_8c_source.html#l00050">50</a> del archivo <a class="el" href="_proyecto___integrador_8c_source.html">Proyecto_Integrador.c</a>.</p>
+
+</div>
+</div>
+<a id="a932a2f4ee5bbdf0ea7bef2a0ee79b11f" name="a932a2f4ee5bbdf0ea7bef2a0ee79b11f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a932a2f4ee5bbdf0ea7bef2a0ee79b11f">&#9670;&#160;</a></span>UT_BAJO</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UT_BAJO&#160;&#160;&#160;10.0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto___integrador_8c_source.html#l00049">49</a> del archivo <a class="el" href="_proyecto___integrador_8c_source.html">Proyecto_Integrador.c</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de funciones</h2>
+<a id="a630544a7f0a2cc40d8a7fefab7e2fe70" name="a630544a7f0a2cc40d8a7fefab7e2fe70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a630544a7f0a2cc40d8a7fefab7e2fe70">&#9670;&#160;</a></span>app_main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void app_main </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto___integrador_8c_source.html#l00234">234</a> del archivo <a class="el" href="_proyecto___integrador_8c_source.html">Proyecto_Integrador.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="_proyecto___integrador_8c_source.html#l00060">ControlHyT_handle</a>, <a class="el" href="_proyecto___integrador_8c_source.html#l00123">funcTimer_HyT()</a>, <a class="el" href="_proyecto___integrador_8c_source.html#l00076">leerDatos()</a>, <a class="el" href="_proyecto___integrador_8c_source.html#l00059">MedirHyT_handle</a>, <a class="el" href="_proyecto___integrador_8c_source.html#l00055">NUM_LEDS</a> y <a class="el" href="_proyecto___integrador_8c_source.html#l00047">TIMER_HyT</a>.</p>
+
+</div>
+</div>
+<a id="aedc4124a5ff0100abd0f9f2048fd5bc5" name="aedc4124a5ff0100abd0f9f2048fd5bc5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aedc4124a5ff0100abd0f9f2048fd5bc5">&#9670;&#160;</a></span>funcTimer_HyT()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void funcTimer_HyT </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Función invocada en la interrupción del timer A. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto___integrador_8c_source.html#l00123">123</a> del archivo <a class="el" href="_proyecto___integrador_8c_source.html">Proyecto_Integrador.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="_proyecto___integrador_8c_source.html#l00060">ControlHyT_handle</a> y <a class="el" href="_proyecto___integrador_8c_source.html#l00059">MedirHyT_handle</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_proyecto___integrador_8c_source.html#l00234">app_main()</a>.</p>
+
+</div>
+</div>
+<a id="aa253af3b500a9209d90c44fefb03137c" name="aa253af3b500a9209d90c44fefb03137c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa253af3b500a9209d90c44fefb03137c">&#9670;&#160;</a></span>leerDatos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void leerDatos </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *</td>          <td class="paramname"><span class="paramname"><em>data</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>length</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>función a ejecutarse ante una interrupción de recepción a través de la conexión BLE. Lee los datos de la aplicación: encendido/apagado y tiempo objetivo del usuario. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>Puntero a arreglo de datos recibidos </td></tr>
+    <tr><td class="paramname">length</td><td>Longitud del arreglo de datos recibidos </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto___integrador_8c_source.html#l00076">76</a> del archivo <a class="el" href="_proyecto___integrador_8c_source.html">Proyecto_Integrador.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="_proyecto___integrador_8c_source.html#l00057">encendido</a>, <a class="el" href="_proyecto___integrador_8c_source.html#l00055">NUM_LEDS</a>, <a class="el" href="_proyecto___integrador_8c_source.html#l00065">tiempoIdeal</a>, <a class="el" href="_proyecto___integrador_8c_source.html#l00066">tiempoIdealMS</a> y <a class="el" href="_proyecto___integrador_8c_source.html#l00067">tiempoLED</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_proyecto___integrador_8c_source.html#l00234">app_main()</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de variables</h2>
+<a id="a2237b4c339a792bdf422b138a11225ee" name="a2237b4c339a792bdf422b138a11225ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2237b4c339a792bdf422b138a11225ee">&#9670;&#160;</a></span>ControlHyT_handle</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TaskHandle_t ControlHyT_handle = NULL</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto___integrador_8c_source.html#l00060">60</a> del archivo <a class="el" href="_proyecto___integrador_8c_source.html">Proyecto_Integrador.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_proyecto___integrador_8c_source.html#l00234">app_main()</a> y <a class="el" href="_proyecto___integrador_8c_source.html#l00123">funcTimer_HyT()</a>.</p>
+
+</div>
+</div>
+<a id="a0a959357aa23f6faa63b3c88eff65e01" name="a0a959357aa23f6faa63b3c88eff65e01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a959357aa23f6faa63b3c88eff65e01">&#9670;&#160;</a></span>distancia</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float distancia = <a class="el" href="#a4c4ae9a4146ce8d6a5debc90300d9abd">NUM_LEDS</a> / 30.0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto___integrador_8c_source.html#l00068">68</a> del archivo <a class="el" href="_proyecto___integrador_8c_source.html">Proyecto_Integrador.c</a>.</p>
+
+</div>
+</div>
+<a id="a5332d02d82dacdfb5c6dc01cb428b013" name="a5332d02d82dacdfb5c6dc01cb428b013"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5332d02d82dacdfb5c6dc01cb428b013">&#9670;&#160;</a></span>encendido</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool encendido = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto___integrador_8c_source.html#l00057">57</a> del archivo <a class="el" href="_proyecto___integrador_8c_source.html">Proyecto_Integrador.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_proyecto___integrador_8c_source.html#l00076">leerDatos()</a>.</p>
+
+</div>
+</div>
+<a id="a34280c09711b9f4f72211e5c467b57bf" name="a34280c09711b9f4f72211e5c467b57bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34280c09711b9f4f72211e5c467b57bf">&#9670;&#160;</a></span>humedad</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float humedad = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto___integrador_8c_source.html#l00063">63</a> del archivo <a class="el" href="_proyecto___integrador_8c_source.html">Proyecto_Integrador.c</a>.</p>
+
+</div>
+</div>
+<a id="ac830e3211ae94323e1e087057e08b359" name="ac830e3211ae94323e1e087057e08b359"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac830e3211ae94323e1e087057e08b359">&#9670;&#160;</a></span>MedirHyT_handle</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TaskHandle_t MedirHyT_handle = NULL</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto___integrador_8c_source.html#l00059">59</a> del archivo <a class="el" href="_proyecto___integrador_8c_source.html">Proyecto_Integrador.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_proyecto___integrador_8c_source.html#l00234">app_main()</a> y <a class="el" href="_proyecto___integrador_8c_source.html#l00123">funcTimer_HyT()</a>.</p>
+
+</div>
+</div>
+<a id="a8347aeb522c9e13e9f376640fad780e7" name="a8347aeb522c9e13e9f376640fad780e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8347aeb522c9e13e9f376640fad780e7">&#9670;&#160;</a></span>temperatura</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float temperatura = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto___integrador_8c_source.html#l00062">62</a> del archivo <a class="el" href="_proyecto___integrador_8c_source.html">Proyecto_Integrador.c</a>.</p>
+
+</div>
+</div>
+<a id="a4a22ffe05e4e858565ff642249a3e577" name="a4a22ffe05e4e858565ff642249a3e577"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a22ffe05e4e858565ff642249a3e577">&#9670;&#160;</a></span>tiempoIdeal</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float tiempoIdeal = 20</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto___integrador_8c_source.html#l00065">65</a> del archivo <a class="el" href="_proyecto___integrador_8c_source.html">Proyecto_Integrador.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_proyecto___integrador_8c_source.html#l00076">leerDatos()</a>.</p>
+
+</div>
+</div>
+<a id="ae442c911a58648921de5456a0879544e" name="ae442c911a58648921de5456a0879544e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae442c911a58648921de5456a0879544e">&#9670;&#160;</a></span>tiempoIdealMS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float tiempoIdealMS = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto___integrador_8c_source.html#l00066">66</a> del archivo <a class="el" href="_proyecto___integrador_8c_source.html">Proyecto_Integrador.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_proyecto___integrador_8c_source.html#l00076">leerDatos()</a>.</p>
+
+</div>
+</div>
+<a id="a274e5fa09f373f2955815c283e707e18" name="a274e5fa09f373f2955815c283e707e18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a274e5fa09f373f2955815c283e707e18">&#9670;&#160;</a></span>tiempoLED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float tiempoLED = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto___integrador_8c_source.html#l00067">67</a> del archivo <a class="el" href="_proyecto___integrador_8c_source.html">Proyecto_Integrador.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_proyecto___integrador_8c_source.html#l00076">leerDatos()</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d9edf6c004b4a7ff14fe9ae7a92214ee.html">firmware</a></li><li class="navelem"><a class="el" href="dir_429d80758da54da73083af4edd40d0b3.html">projects</a></li><li class="navelem"><a class="el" href="dir_6a492918b4b1b94bfe7d2566f732ae10.html">Proyecto_Integrador</a></li><li class="navelem"><a class="el" href="dir_3b199c4b78c4e35bce7c24e7e2cd4ae5.html">main</a></li><li class="navelem"><a class="el" href="_proyecto___integrador_8c.html">Proyecto_Integrador.c</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
+  </ul>
+</div>
+</body>
+</html>
